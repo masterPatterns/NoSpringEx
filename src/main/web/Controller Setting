@@ -1,0 +1,13 @@
+
+@RequestMapping(value = "/eduVideo", method = RequestMethod.GET)
+public String scheduleMonth() {
+    return "/sub/education/edu_video";
+}
+    
+@RequestMapping(value = "/newVideoList", produces = "application/json; charset=utf8", method = RequestMethod.POST)
+public Map<String, Object> newVideoInit(@RequestBody EduBoardParamVo eduBoardParamVo) {
+    
+    Map<String, Object> listVo = eduBoardService.newVideoList(eduBoardParamVo);
+    
+    return listVo;
+}

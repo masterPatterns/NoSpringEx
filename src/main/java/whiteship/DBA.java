@@ -10,18 +10,13 @@ public class DBA {
 	final String JDBC_DRIVER = "com.mysql.jdbc.Driver"; // jdbc 드라이버 주소
 	final String DB_URL = "jdbc:mysql://localhost:3306/databasename?useSSL=false"; // DB 접속 주소
 	//localhost는 접속하려는 데이터베이스 주소를 입력하시면 됩니다. localhost를 사용하면 됩니다.
-	//3306은 데이터베이스에 접속할때 사용하는 포터번호입니다. 설치할때 설정한 포트번호를 사용합니다.
-	//databasename에는 접속하려는 database의 name을 입력해줍니다.
+	//3306은 데이터베이스에 접속할때 사용하는 포트번호입니다. 설치할때 설정한 포트번호를 사용합니다.
+	//databasename에는 접속하려는 database의 이름을 입력해줍니다.
 	final String USERNAME = "root"; // DB ID 
 	final String PASSWORD = "root"; // DB Password
 	Connection conn = null;
 
 	public void connection() {
-		// MySql에 사용하는여러 객체를 만들어줍니다.
-//		Statement stmt = null; 
-//		ResultSet rs = null;
-
-		System.out.print("User Table 접속 : ");
 		try {
 			Class.forName(JDBC_DRIVER); //Class 클래스의 forName()함수를 이용해서 해당 클래스를 메모리로 로드 하는 것입니다.
 			//URL, ID, password를 입력하여 데이터베이스에 접속합니다.
